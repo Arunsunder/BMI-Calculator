@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <style>
+            input[type="range"]{
+                width: 130%;
+            }
+            #result,#category{
+                font-weight: bolder;
+                font-family: Comic Sans Ms,cursive;
+            }
+        </style>
+    </head>
+    <body style="background-image: url(images/bmi2.jpg); background-repeat: no-repeat; background-size: cover;">
+        <div class="container-fluid" style="height: 100vh; font-family: Comic Sans Ms,comic sans ms,cursive;">
+            <div class="row" style="height: 100vh;">
+                <div class="col-md-3"></div>
+                   <div class="col-md-6 my-auto">
+                       <div class="jumbotron p-2">
+                        <h1 class="text-center" style="color: darkblue;">BMI Calculator</h1>
+                        <hr>
+                        <div class="row p-2 ">
+                            <div class="col-md-4 text-center">
+                                <label><b>Weight</b></label>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <input id="weight" type="range" min="20" max="200" value="20"  oninput="calculate()">
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <span id="weight-val">20 kg</span><br>
+                            </div>    
+                        </div>
+                        <div class="row p-2">
+                            <div class="col-md-4 text-center">
+                                <label><b>Height</b></label>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <input id="height" type="range" min="100" max="250" value="100" oninput="calculate()">
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <span id="height-val">100 cm</span><br>
+                            </div>    
+                        </div>
+                        <div class="row ">
+                            <div class="col">
+                                <p class="text-center" id="result"></p>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col">
+                                <p class="text-center" id="category"></p>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+                
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
